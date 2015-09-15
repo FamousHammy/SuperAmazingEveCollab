@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<head>
+    {%  block head %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - EVE Online Data Scraper</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2015 by HammyWhammy.
+        {% endblock %}
+    </div>
+</body>
+</html>
