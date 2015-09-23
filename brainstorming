@@ -1,0 +1,23 @@
+fetch_items_dropped(event) -> [[item, quantity], [item, quantity], ..., [item, quantity]]
+	scrape https://zkillboard.com/kill/{event} for
+
+
+re_item_line = re.compile('td class="item_[dropped or destroyed]"><a href="/item/' [anything]
+quantity is on the next line. get the whole line, number is sixth to last character
+
+
+top_150(starting_event, events_to_count) -> sorted dict [item, frequency]
+	drop_frequencies = {}
+	for event in range (starting_event - events_to_count, starting_event):
+		current_event_items = fetch_items_dropped(event)
+		for item in current_event_items:
+			if drop_frequencies.contains(item[0]):
+				drop_frequencies[item[0]] += item[1]
+			elif:
+				drop_frequencies.append(item)
+
+	sort(drop_frequencies) by frequency
+	return drop_frequencies
+
+Reference:
+view-source:https://zkillboard.com/kill/49008607/
